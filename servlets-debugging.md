@@ -1,6 +1,6 @@
 # Servlets——调试
 
-测试/调试 Servlet 始终是开发使用过程中的难点。Servlets 往往涉及大量的客户端/服务器交互，可能会出现错误但又难以重现。
+测试/调试 servlet 始终是开发使用过程中的难点。Servlets 往往涉及大量的客户端/服务器交互，可能会出现错误但又难以重现。
 
 这里有一些提示和建议，可以帮助你调试。
 
@@ -18,11 +18,11 @@ System.out.println() 是作为一个标记来使用的，使用方法简单，�
 System.out.println("Debugging message");
 ```
 
-通过上面的语法生成的所有消息将被记录在 Web 服务器日志文件中。
+通过上面的语法生成的所有消息将被记录在 web 服务器日志文件中。
 
 ## 消息日志：
 
-使用适当的日志记录方法来记录所有调试、警告和错误消息，这是非常好的想法，推荐使用 [log4J]( http://www.tutorialspoint.com/log4j/index.htm) 来记录所有的消息。
+使用适当的日志记录方法来记录所有调试、警告和错误消息，这是非常好的想法，我使用的是 [log4J]( http://www.tutorialspoint.com/log4j/index.htm) 来记录所有的消息。
 
 Servlet API 还提供了一个简单的输出信息的方式，使用 log() 方法，如下所示：
 
@@ -67,9 +67,9 @@ ServletContext 把它的文本消息记录到 Servlet 容器的日志文件中�
 
 ## 使用 JDB 调试器：
 
-你可以使用调试 applet 或应用程序的 jdb 命令来调试 Servlet。
+你可以使用调试 applet 或应用程序的 jdb 命令来调试 servlet。
 
-为了调试一个 servlet，我们可以调试 sun.servlet.http.HttpServer，然后把它看成是 HttpServer 执行 Servlet 来响应浏览器端的 HTTP 请求。这与调试 applet 小程序非常相似。与调试 applet 不同的是，实际被调试的程序是 sun.applet.AppletViewer。
+为了调试一个 servlet，我们可以调试 sun.servlet.http.HttpServer，然后把它看成是 HttpServer 执行 servlet 来响应浏览器端的 HTTP 请求。这与调试 applet 小程序非常相似。与调试 applet 不同的是，实际被调试的程序是 sun.applet.AppletViewer。
 
 大多数调试器会自动隐藏如何调试 applet 的细节。同样的，对于 servlet，你必须帮调试器执行以下操作：
 
@@ -77,9 +77,9 @@ ServletContext 把它的文本消息记录到 Servlet 容器的日志文件中�
 
 - 设置你的调试器的类路径 classpath，以便它可以找到你的 servlet 和支持的类，通常是在 server_root/servlets 和 server_root/classes 中。
 
-你通常不会希望 server_root/servlets 在你的 classpath 中，因为它会禁用 servlet 的重新加载。但是这种包含规则对于调试是非常有用的。它允许你的调试器在 HttpServer 中的自定义 Servlet 加载器加载 Servlet 之前在 Servlet 中设置断点。
+你通常不会希望 server_root/servlets 在你的 classpath 中，因为它会禁用 servlet 的重新加载。但是这种包含规则对于调试是非常有用的。它允许你的调试器在 HttpServer 中的自定义 servlet 加载器加载 servlet 之前在 servlet 中设置断点。
 
-如果你已经设置了正确的类路径 classpath，就可以开始调试 sun.servlet.http.HttpServer。可以在你想要调试的 Servlet 代码中设置断点，然后通过 Web 浏览器使用给定的 Servlet（http://localhost:8080/servlet/ServletToDebug）向 HttpServer 发出请求。你会看到程序执行到断点处会停止。
+如果你已经设置了正确的类路径，就可以开始调试 sun.servlet.http.HttpServer。可以在你想要调试的 servlet 代码中设置断点，然后通过 web 浏览器使用给定的 servlet（http://localhost:8080/servlet/ServletToDebug）向 HttpServer 发出请求。你会看到程序执行到断点处会停止。
 
 ## 使用注释：
 
@@ -95,7 +95,7 @@ ServletContext 把它的文本消息记录到 Servlet 容器的日志文件中�
 
 下面列出了一些 servlet 调试的技巧：
 
-- 请注意，server_root/classes 不会重载，而 server_root/servlets 可能会。
+- 请注意，server _ root/classes 不会重载，而 server_root/servlets 可能会。
 
 - 要求浏览器显示它所显示的页面的原始内容。这有助于识别格式的问题。它通常是“视图”菜单下的一个选项。
 

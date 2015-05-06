@@ -1,6 +1,6 @@
-# Servlet——服务器 HTTP 响应
+# Servlets——服务器 HTTP 响应
 
-正如前面的章节中讨论的那样，当一个 Web 服务器响应一个 HTTP 请求时，响应通常包括一个状态行、一些响应报头、一个空行和文档。一个典型的响应如下所示：
+正如前面的章节中讨论的那样，当一个 Web 服务器响应一个 HTTP 对浏览器的请求时，响应通常包括一个状态行、一些响应头信息、一个空行和文档。一个典型的响应如下所示：
 
 <pre class="prettyprint notranslate">
 HTTP/1.1 200 OK
@@ -21,7 +21,7 @@ HeaderN: ...
 
 状态行包括 HTTP 版本（在本例中为 HTTP/1.1）、一个状态码（在本例中为 200）和一个对应于状态码的短消息（在本例中为 OK）。
 
-下表总结了从 Web 服务器端返回到浏览器的最有用的 HTTP 1.1 响应报头，你会在 Web 编程中频繁地使用它们：
+下表总结了从 web 服务器端返回到浏览器的最有用的 HTTP 1.1 响应头信息，你会在 web 编程中频繁地使用它们：
 
 <table class="table table-bordered">
 <tr><th style="width:30%">头信息</th><th>描述</th></tr>
@@ -43,7 +43,7 @@ HeaderN: ...
 
 ## 设置 HTTP 响应头信息的方法：
 
-下面的方法可用于在 Servlet 程序中设置 HTTP 响应头信息。这些方法通过 *HttpServletResponse* 对象可用。
+下面的方法可用于在 servlet 程序中设置 HTTP 响应头信息。这些方法通过 *HttpServletResponse* 对象可用。
 
 <table class="table table-bordered">
 <tr><th style="width:5%">序号</th><th>方法 &amp; 描述</th></tr>
@@ -148,7 +148,7 @@ public class Refresh extends HttpServlet {
 }
 ```
 
-现在，调用上面的 Servlet，每隔 5 秒会显示当前系统时间。只要运行 Servlet 并稍等片刻，即可看到如下的结果：
+现在，调用上面的 servlet，每隔 5 秒会显示当前系统时间。只要运行 servlet 并稍等片刻，即可看到如下的结果：
 
 <pre class="result notranslate">
 <h1 align="center">Auto Refresh Header Setting</h1>

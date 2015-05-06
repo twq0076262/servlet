@@ -1,6 +1,6 @@
 # Servlets——网页重定向
 
-当文档移动到新的位置，我们需要向客户端发送这个新位置时，我们需要用到网页重定向。当然，也可能是为了负载均衡，或者只是为了简单的随机，这些情况都有可能用到网页重定向。
+当文档移动到新的位置，我们需要向客户端发送这个新位置时，就要用到网页重定向。当然，也可能是为了负载均衡，或者只是为了简单的随机，这些情况都有可能用到网页重定向。
 
 重定向请求到另一个网页的最简单的方式是使用 response 对象的 **sendRedirect()** 方法。下面是该方法的定义： 
 
@@ -59,4 +59,4 @@ public class PageRedirect extends HttpServlet{
 ....
 ```
 
-现在通过访问 URL http://localhost:8080/PageRedirect 来调用这个 Servlet。这将使你转到给定的 URL http://www.photofuntoos.com。
+现在通过访问 URL http://localhost:8080/PageRedirect 来调用这个 servlet。这将使你转到给定的 URL http://www.photofuntoos.com。

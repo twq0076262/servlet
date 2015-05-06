@@ -1,6 +1,6 @@
 # Servlets——包
 
-涉及到 WEB-INF 子目录的 Web 应用程序结构是所有的 Java web 应用程序的标准，并由 Servlet API 规范指定。给定一个顶级目录名 myapp，目录结构如下所示：
+涉及到 WEB-INF 子目录的 web 应用程序结构是所有的 Java web 应用程序的标准，并由 servlet API 规范指定。给定一个 myapp 的顶级目录名，目录结构如下所示：
 
 <pre class="prettyprint notranslate">
 /myapp
@@ -15,7 +15,7 @@ WEB-INF 子目录中包含应用程序的部署描述符，名为 web.xml。所�
 
 ## 创建包中的 Servlets：
 
-WEB-INF/classes 目录包含了所有的 Servlet 类和其他类文件，类文件所在的目录结构与他们的包名称匹配。例如，如果你有一个完全合格的类名称 **com.myorg.MyServlet**，那么这个 servlet 类必须位于以下目录中：
+WEB-INF/classes 目录包含了所有的 servlet 类和其他类文件，类文件所在的目录结构与他们的包名称匹配。例如，如果你有一个完全合格的类名称 **com.myorg.MyServlet**，那么这个 servlet 类必须位于以下目录中：
 
 ``` 
 /myapp/WEB-INF/classes/com/myorg/MyServlet.class
@@ -66,9 +66,9 @@ $ javac MyServlet.java
 
 如果 servlet 依赖于其他库，那么你必须在 CLASSPATH 中也要引用那些 JAR 文件。这里我只引用了 servlet-api.jar JAR 文件，因为我在 Hello World 程序中并没有使用任何其他库。
 
-该命令行使用内置的 javac 编译器，它是 Sun Microsystems Java 软件开发工具包（JDK）附带的。为了让该命令正常工作，必须包括您在 PATH 环境变量中所使用的 Java SDK 的位置。
+该命令行使用内置的 javac 编译器，它是 Sun Microsystems Java 软件开发工具包（JDK）附带的。为了让该命令正常工作，必须包括你在 PATH 环境变量中所使用的 Java SDK 的位置。
 
-如果一切顺利，上述编译会在同一目录下生成 **MyServlet.class** 文件。下一节将解释如何把一个已编译的 Servlet 部署到生产中。
+如果一切顺利，上述编译会在同一目录下生成 **MyServlet.class** 文件。下一节将解释如何把一个已编译的 servlet 部署到生产中。
 
 ## Servlet 打包部署：
 

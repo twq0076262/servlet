@@ -1,6 +1,6 @@
-# Servlet——Cookies 处理
+# Servlets——Cookies 处理
 
-Cookies 是存储在客户端计算机上的文本文件，并保留了各种跟踪信息。Java Servlet 显然支持 HTTP Cookies。
+Cookies 是存储在客户端计算机上的文本文件，并保留了各种用于跟踪的信息。Java Servlet 显然支持 HTTP Cookies。
 
 识别返回用户包括三个步骤：
 
@@ -8,13 +8,13 @@ Cookies 是存储在客户端计算机上的文本文件，并保留了各种跟
 
 - 浏览器将这些信息存储在本地计算机上，以备将来使用。
 
-- 当下一次浏览器向 Web 服务器发送任何请求时，浏览器会把这些 Cookies 信息发送到服务器，服务器将使用这些信息来识别用户。
+- 当下一次浏览器向 web 服务器发送任何请求时，浏览器会把这些 cookies 信息发送到服务器，服务器将使用这些信息来识别用户。
 
-本章将向你讲解如何设置或重置 Cookies，如何访问它们，以及如何将它们删除。
+本章将向你讲解如何设置或重置 cookies，如何访问它们，以及如何将它们删除。
 
 ## Cookie 剖析：
 
-Cookies 通常设置在 HTTP 头信息中（虽然 JavaScript 也可以直接在浏览器上设置一个 Cookie）。设置 Cookie 的 servlet 会发送如下的头信息：
+Cookies 通常设置在 HTTP 头信息中（虽然 JavaScript 也可以直接在浏览器上设置一个 cookie）。设置 cookie 的 servlet 会发送如下的头信息：
 
 ``` 
 HTTP/1.1 200 OK
@@ -26,9 +26,9 @@ Connection: close
 Content-Type: text/html
 ```
 
-正如你所看到的，Set-Cookie 头包含了一个名称值对、一个 GMT 日期、一个路径和一个域。名称和值会被 URL 编码。expires 字段是一个指令，告诉浏览器在给定的时间和日期之后“忘记”该 Cookie。
+正如你所看到的，Set-Cookie 头包含了一个名称值对、一个 GMT 日期、一个路径和一个域。名称和值会被 URL 编码。expires 字段是一个指令，告诉浏览器在给定的时间和日期之后“忘记”该 cookie。
 
-如果浏览器被配置为存储 Cookies，它将会保留此信息直到到期日期。如果用户的浏览器指向任何匹配该 Cookie 的路径和域的页面，它会重新发送 Cookie 到服务器。浏览器的头信息可能如下所示：
+如果浏览器被配置为存储 cookies，它将会保留此信息直到到期日期。如果用户的浏览器指向任何匹配该 cookie 的路径和域的页面，它会重新发送 cookie 到服务器。浏览器的头信息可能如下所示：
 
 ``` 
 GET / HTTP/1.0
@@ -42,11 +42,11 @@ Accept-Charset: iso-8859-1,*,utf-8
 Cookie: name=xyz
 ```
 
-Servlet 就能够通过请求方法 request.getCookies() 访问 Cookie，该方法将返回一个 Cookie 对象的数组。
+Servlet 之后就能够通过请求方法 request.getCookies() 访问 cookie，该方法将返回一个 *Cookie* 对象的数组。
 
 ## Servlet Cookies 方法：
 
-以下是在 Servlet 中操作 Cookies 时可使用的有用的方法列表。
+以下是在 servlet 中操作 cookies 时可使用的有用的方法列表。
 
 <table class="table table-bordered">
 <tr><th style="width:5%">序号</th><th>方法 &amp; 描述</th></tr>
@@ -78,7 +78,7 @@ Servlet 就能够通过请求方法 request.getCookies() 访问 Cookie，该方�
 
 ## 通过 Servlet 设置 Cookies：
 
-通过 Servlet 设置 cookies 包括三个步骤：
+通过 servlet 设置 cookies 包括三个步骤：
 
 **(1) 创建一个 Cookie 对象：**你可以调用带有 cookie 名称和 cookie 值的 Cookie 构造函数，cookie 名称和 cookie 值都是字符串。
 
@@ -98,7 +98,7 @@ Cookie cookie = new Cookie("key","value");
 cookie.setMaxAge(60*60*24); 
 ```
 
-**(3) 发送 Cookie 到 HTTP 响应头：**你可以使用 **response.addCookie** 来添加 HTTP 响应头中的 Cookies，如下所示：
+**(3) 发送 Cookie 到 HTTP 响应头：**你可以使用 **response.addCookie** 来添加 HTTP 响应头中的 cookies，如下所示：
 
 ``` 
 response.addCookie(cookie);
@@ -106,7 +106,7 @@ response.addCookie(cookie);
 
 ## 实例：
 
-让我们修改我们的[表单数据实例]( http://www.tutorialspoint.com/servlets/servlets-form-data.htm)，为名字和姓氏设置 cookies。
+让我们修改我们的[表单实例]( http://www.tutorialspoint.com/servlets/servlets-form-data.htm)，为名字和姓氏设置 cookies。
 
 ``` 
 // Import required java libraries
@@ -180,7 +180,7 @@ Last Name: <input type="text" name="last_name" />
 
 尝试输入名字和姓氏，然后点击“提交”按钮，名字和姓氏将显示在屏幕上，同时会设置 firstName 和 lastName 这两个 cookies，当下次你按下提交按钮时，会将这两个 cookies 传回到服务器。
 
-下一节会讲解如何在 Web 应用程序中访问这些 cookies。
+下一节会讲解如何在 web 应用程序中访问这些 cookies。
 
 ## 通过 Servlet 读取 Cookies：
 
@@ -233,7 +233,7 @@ public class ReadCookies extends HttpServlet {
 }
 ```
 
-编译上面的 servlet **ReadCookies**，并在 web.xml 文件中创建适当的条目。如果你已经设置了 first_name cookie 为 “John”，last_name cookie 为 “Player” ，尝试运行 *http://localhost:8080/ReadCookies*，将显示如下结果：
+编译上面的 servlet **ReadCookies**，并在 web.xml 文件中创建适当的条目。如果你已经设置了 first _ name cookie 为 “John”，last _ name cookie 为 “Player” ，尝试运行 *http://localhost:8080/ReadCookies*，将显示如下结果：
 
 <pre class="result notranslate">
 <h2> Found Cookies Name and Value</h2>
@@ -254,7 +254,7 @@ Name : last_name,  Value: Player
 
 ## 实例：
 
-下面的例子将删除现有的名为 “first_name” 的 cookie，当你下次运行 ReadCookies 的 servlet 时，它会返回 first_name 为空值。
+下面的例子将删除现有的名为 “first _ name” 的 cookie，当你下次运行 ReadCookies 的 servlet 时，它会返回 first _ name 为空值。
 
 ``` 
 // Import required java libraries

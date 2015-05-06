@@ -14,7 +14,7 @@ public void setIntHeader(String header, int headerValue)
 
 ## 自动刷新页面实例:
 
-本实例演示了 Servlet 如何使用 **setIntHeader()** 方法来设置 **Refresh** 头信息，从而实现自动刷新页面。
+本实例演示了 servlet 如何使用 **setIntHeader()** 方法来设置 **Refresh** 头信息，从而实现自动刷新页面。
 
 ``` 
 // Import required java libraries

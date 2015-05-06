@@ -1,14 +1,14 @@
 # Servlets——数据库访问
 
-本教程假定你已经了解了 JDBC 应用程序的工作方式。在你开始学习 Servlet 数据库访问之前，请确保你已经有适当的 JDBC 环境设置和数据库。
+本教程假定你已经了解了 JDBC 应用程序的工作方式。在你开始学习 servlet 数据库访问之前，请确保你已经有适当的 JDBC 环境设置和数据库。
 
 关于使用 JDBC 访问数据库及 JDBC 的环境配置的更多细节，请看 [JDBC 教程]( http://www.tutorialspoint.com/jdbc/index.htm)。
 
 从基本概念下手，让我们来创建一个简单的表，并在表中创建几条记录。
 
-## 创建数据库表
+## 创建表
 
-在测试数据库 TEST 中创建 **Employees** 表，请按以下步骤进行：
+在 TEST 数据库中创建 **Employees** 表，请按以下步骤进行：
 
 ### 步骤 1：
 
@@ -32,7 +32,7 @@ mysql>
 
 ### 步骤 3：
 
-在测试数据库 **TEST** 中创建 **Employee** 表，如下所示：
+在 **TEST** 数据库中创建 **Employee** 表，如下所示：
 
 ``` 
 mysql> use TEST;

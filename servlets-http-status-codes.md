@@ -4,7 +4,7 @@ HTTP 请求和 HTTP 响应消息的格式是类似的，结构如下：
 
 - 初始状态行 + 回车换行符（回车+换行）
 
-- 零个或多个标题行+回车换行符
+- 零个或多个标题行 + 回车换行符
 
 - 一个空白行，即回车换行符
 
@@ -203,9 +203,9 @@ HeaderN: ...
   </tr>
 </table> 
 
-## 设置 HTTP 状态代码的方法：
+## 设置 HTTP 状态码的方法：
 
-下面的方法可用于在 Servlet 程序中设置 HTTP 状态码。这些方法通过 *HttpServletResponse* 对象可用。
+下面的方法可用于在 servlet 程序中设置 HTTP 状态码。这些方法通过 *HttpServletResponse* 对象可用。
 
 <table class="table table-bordered">
 <tr><th style="width:5%">序号	</th><th>方法&amp;描述</th></tr>
@@ -219,7 +219,7 @@ HeaderN: ...
 
 ## HTTP 状态码实例：
 
-下面的例子把 407 错误代码发送到客户端浏览器，浏览器会显示 “Need authentication!!!”消息。
+下面的例子把 407 错误代码发送到客户端浏览器，浏览器会显示 “需要身份验证！！！”消息。
 
 ```
 // Import required java libraries

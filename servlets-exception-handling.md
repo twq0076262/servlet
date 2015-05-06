@@ -1,12 +1,12 @@
-# Servlet——异常处理
+# Servlets——异常处理
 
-当一个 servlet 抛出一个异常时，Web 容器在使用了 exception-type 元素的 **web.xml** 中搜索与抛出异常类型相匹配的配置。
+当一个 servlet 抛出一个异常时，web 容器在使用了 exception-type 元素的 **web.xml** 中搜索与抛出异常类型相匹配的配置。
 
 你必须在 web.xml 中使用 **error-page** 元素来指定对特定**异常**或 HTTP **状态码**作出相应的 servlet 调用。
 
 ## web.xml 配置：
 
-假设，有一个 *ErrorHandler* 的 servelt 在任何已定义的异常或错误出现时被调用。以下将是在 web.xml 中创建的项。
+假设，有一个 *ErrorHandler* 的 servelt 在任何已定义的异常或错误出现时被调用。以下是要在 web.xml 中创建的项。
 
 <pre class="prettyprint notranslate">
 &lt;!-- servlet definition --&gt;
@@ -60,7 +60,7 @@
 
 - 如果有错误状态代码出现，不管为 404（未找到）或 403（禁止），则会调用 ErrorHandler 的 servlet。
 
-- 如果 Web 应用程序抛出 *ServletException* 或 *IOException*，那么 Web 容器会调用 /ErrorHandler 的 Servlet。
+- 如果 web 应用程序抛出 *ServletException* 或 *IOException*，那么 web 容器会调用 /ErrorHandler 的 Servlet。
 
 - 你可以定义不同的错误处理程序来处理不同类型的错误或异常。上面的实例是非常通用的，希望你能通过实例理解基本的概念。
 
@@ -184,7 +184,7 @@ public class ErrorHandler extends HttpServlet {
 &lt;/error-page&gt;
 </pre>
 
-现在，尝试使用一个会产生异常的 Servlet，或者输入一个错误的 URL，这将触发 Web 容器调用 **ErrorHandler** 的 Servlet，并显示适当的消息。例如，如果你输入了一个错误的 URL，那么它将显示下面的结果：
+现在，尝试使用一个会产生异常的 servlet，或者输入一个错误的 URL，这将触发 Web 容器调用 **ErrorHandler** 的 servlet，并显示适当的消息。例如，如果你输入了一个错误的 URL，那么它将显示下面的结果：
 
 <pre class="result notranslate">
 The status code : 404
@@ -192,4 +192,4 @@ The status code : 404
 
 
 
-上面的代码在某些 Web 浏览器中可能无法正常工作。因此，请尽量尝试使用 Mozilla 和 Safari 浏览器，在这两种浏览器中它们应该能够正常工作。
+上面的代码在某些 web 浏览器中可能无法正常工作。因此，请尽量尝试使用 Mozilla 和 Safari 浏览器。

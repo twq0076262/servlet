@@ -1,8 +1,8 @@
 # Servlets——客户端 HTTP 请求
 
-当浏览器请求网页时，它会向 Web 服务器发送特定信息，这些信息不能被直接读取，因为这些信息是作为 HTTP 请求的头的一部分进行传输的。你可以查看 [HTTP 协议]( http://www.tutorialspoint.com/http/index.htm)了解更多相关信息。
+当浏览器请求网页时，它会向 web 服务器发送特定信息，这些信息不能被直接读取，因为这些信息是作为 HTTP 请求的头的一部分进行传输的。你可以查看 [HTTP 协议]( http://www.tutorialspoint.com/http/index.htm)了解更多相关信息。
 
-以下是来自于浏览器端的重要头信息，你可以在 Web 编程中频繁使用：
+以下是来自于浏览器端的重要头信息，你会在 web 编程中频繁使用：
 
 <table class="table table-bordered">
 <tr><th style="width:30%">头信息</th><th>描述</th></tr>
@@ -23,7 +23,7 @@
 
 ## 读取 HTTP 头的方法：
 
-下面的方法可用在 Servlet 程序中读取 HTTP 头。这些方法通过 *HttpServletRequest* 对象可用。
+下面的方法可用在 servlet 程序中读取 HTTP 头。这些方法通过 *HttpServletRequest* 对象可用。
 
 <table class="table table-bordered">
 <tr><th style="width:5%">序号</th><th>方法 &amp; 描述</th></tr>
@@ -142,7 +142,7 @@ public class DisplayHeader extends HttpServlet {
 }
 ```
 
-现在，调用上面的 Servlet 会产生以下结果：
+现在，调用上面的 servlet 会产生以下结果：
 
 <pre class="result notranslate">
 <h1 align="center">HTTP Header Request Example</h1>

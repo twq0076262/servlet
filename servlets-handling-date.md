@@ -78,7 +78,7 @@ public class CurrentDate extends HttpServlet {
 }
 ```
 
-现在，让我们来编译上面的 Servlet，并在 web.xml 文件中创建适当的条目，然后通过访问 http://localhost:8080/CurrentDate 来调用该 Servlet。这将会产生如下的结果：
+现在，让我们来编译上面的 servlet，并在 web.xml 文件中创建适当的条目，然后通过访问 http://localhost:8080/CurrentDate 来调用该 servlet。这将会产生如下的结果：
 
 <pre class="result notranslate">
 <h1 align="center">Display Current Date &amp; Time</h1>
@@ -176,4 +176,5 @@ public class CurrentDate extends HttpServlet {
 <tr><td>'</td><td>Escape for text</td><td>Delimiter</td></tr>
 <tr><td>"</td><td>单引号</td><td>`</td></tr>
 </table> 
+
 如需查看可用的处理日期方法的完整列表，你可以参考标准的 Java 文档。

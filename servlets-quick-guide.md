@@ -4,7 +4,7 @@
 
 Java servlet 是运行在 Web 或应用服务器上的程序，作为在来自 Web 浏览器或其他 HTTP 客户机的请求和在 HTTP 服务器上的数据库或应用程序的中间层。 
 
-使用 Servlet，你可以通过 Web 页面表单来收集用户的输入，显示从数据库或其他来源的记录，动态地创建 Web 页面。 
+使用 Servlet，你可以通过 web 页面表单来收集用户的输入，显示从数据库或其他来源的记录，动态地创建 web 页面。 
 
 Java servlet 通常服务于使用 Common Gateway Interface (CGI) 实现的同样的目的程序。但与 CGI 相比，Servlet 具有几个优点。
 
@@ -22,7 +22,7 @@ Java servlet 通常服务于使用 Common Gateway Interface (CGI) 实现的同�
 
 以下图表显示了Servlet在Web应用程序中的位置。
 
-![](../images/quick1.jpg)
+![](images/quick1.jpg)
 
 ## Servlet 包： 
 
@@ -88,7 +88,7 @@ or
 
 启动后，可以通过访问 http://localhost:8080 / 来使用包含 Tomcat 的默认的 web 应用程序。如果一切都正常，那么它应该显示下面的结果：
 
-![](../images/environment1.jpg)
+![](images/environment1.jpg)
 
 关于配置和运行 Tomcat 的更多的信息可以在包含这个的文档中找到，也可以在 Tomcat 网址：http://tomcat.apache.org 中找到。
 
@@ -199,6 +199,6 @@ $ javac HelloWorld.java
 
 你几乎已经完成了，现在让我们开始使用 <Tomcat-installation-directory>\bin\startup.bat (在 windows 上)或者 <Tomcat-installation-directory>/bin/startup.sh (在 Linux/Solaris 等等)来启动 Tomcat 服务器，最后在浏览器的地址栏中输入 **http://localhost:8080/HelloWorld**。如果一切都正常，你将获得以下结果：
 
-![](../images/example1.jpg)
+![](images/example1.jpg)
 
 为了获得详细的 Servlet 信息，你可以从头开始学习完整的教程：[**Java Servlets**](http://www.tutorialspoint.com/servlets/index.htm)。

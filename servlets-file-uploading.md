@@ -12,7 +12,7 @@ Servlet 可以与 HTML form 标签一起使用，来允许用户上传文件到�
 
 - 表单 **action** 属性应该设置为在后端服务器上处理文件上传的 servlet 文件。下面的实例使用了 **UploadServlet** servlet 来上传文件。
 
-- 上传单个文件，你应该使用单个带有属性 type=“file” 的 <input .../> 标签。为了允许多个文件上传，请包含多个 name 属性值不同的 input 标签。输入标签具有不同的名称属性的值。浏览器会为每个 input 标签关联一个浏览按钮。
+- 上传单个文件，你应该使用单个带有属性 type=“file” 的 <input .../> 标签。为了允许多个文件上传，请包含多个带有 name 属性不同值的 input 标签。浏览器会为每个 input 标签关联一个浏览按钮。
 
 <pre class="prettyprint notranslate tryit"> 
 &lt;html&gt;
@@ -177,7 +177,7 @@ public class UploadServlet extends HttpServlet {
 
 ## 编译和运行 Servlet：
 
-编译上面的 Servlet UploadServlet，并在 web.xml 文件中创建所需的条目，如下所示：
+编译上面的 servlet UploadServlet，并在 web.xml 文件中创建所需的条目，如下所示：
 
 ``` 
 <servlet>
@@ -190,7 +190,7 @@ public class UploadServlet extends HttpServlet {
 </servlet-mapping>
 ```
 
-现在尝试使用你在上面创建的 HTML 表单来上传文件。当你在浏览器中访问：http://localhost:8080/UploadFile.htm 时，它会显示下面的结果，这将有助于你从本地计算机上传任何文件。
+现在尝试使用你在上面创建的 HTML 表单来上传文件。当你在浏览器中访问 http://localhost:8080/UploadFile.htm 时，它会显示下面的结果，这将有助于你从本地计算机上传任何文件。
 
 <pre class="result notranslate"> 
 <b>File Upload:</b> 
