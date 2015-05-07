@@ -1,8 +1,8 @@
-# Servlet——实例
+# Servlets——实例
 
-Servlets 是服务 HTTP 请求并实现 **javax.servlet.Servlet** 接口的 Java 类。Web 应用程序开发人员通常编写扩展 javax.servlet.http.HttpServlet 的 servlets，实现 Servlet 接口的抽象类并专门用来处理 HTTP 请求。
+Servlets 是 Java 类，服务于 HTTP 请求并实现了 **javax.servlet.Servlet** 接口。Web 应用程序开发人员通常编写扩展 javax.servlet.http.HttpServlet 的 servlets，它是一个实现了 Servlet 接口的抽象类并且是为处理 HTTP 请求专门设计的。
 
-## Hello World 示例代码：
+## Hello World 的示例代码：
 
 下面是 servlet 编写 Hello World 的示例源代码：
 
@@ -38,7 +38,7 @@ public class HelloWorld extends HttpServlet {
 
 ## 编译 Servlet：
 
-让我们把上面的代码写在 HelloWorld.java 文件中，并把这个文件放在 C:\ServletDevel（在 Windows 上）或 /usr/ServletDevel（在 UNIX 上）中，然后你还需要把这些目录添加到 CLASSPATH 中。
+让我们把上述代码放入 HelloWorld.java 文件中，并把这个文件放在 C:\ServletDevel（Windows 操作系统中）或 /usr/ServletDevel（UNIX 操作系统中）中，然后你需要将这些目录添加到 CLASSPATH 中。
 
 假设你的环境已经正确地设置，进入 **ServletDevel** 目录，并编译 HelloWorld.java，如下所示：
 
@@ -46,17 +46,17 @@ public class HelloWorld extends HttpServlet {
 $ javac HelloWorld.java
 ```
 
-如果 servlet 依赖于任何其他库，你必须在 CLASSPATH 中包含那些 JAR 文件。我只包含了 servlet-api.jar JAR 文件，因为我没有在 Hello World 程序中使用任何其他库。
+如果 servlet 依赖于任何其他库，你必须还要在 CLASSPATH 中包含那些 JAR 文件。我只包含了 servlet-api.jar JAR 文件，因为我在 Hello World 程序中没有使用任何其他库。
 
-该命令行使用 Sun Microsystems Java 软件开发工具包（JDK）内置的 javac 编译器。为使该命令正常工作，你必须包含 PATH 环境变量中使用的 Java SDK 的位置。
+该命令行使用了来自 Sun Microsystems Java 软件开发工具包（JDK）的内置的 javac 编译器。为使该命令正常工作，你必须包含在 PATH 环境变量中使用的 Java SDK 的位置。
 
-如果一切顺利，上面编译会在同一目录下生成 **HelloWorld.class** 文件。下一节将讲解已编译的 servlet 如何部署在生产中。
+如果一切顺利，上述编译会在相同的目录中产生 **HelloWorld.class** 文件。下一节将解释在生产中如何部署一个已编译的 servlet 。
 
 ## Servlet 部署：
 
-默认情况下，servlet 应用程序位于路径 <Tomcat-installation-directory>/webapps/ROOT 下，且类文件放在 <Tomcat-installation-directory>/webapps/ROOT/WEB-INF/classes 中。
+默认情况下，servlet 应用程序是位于路径 <Tomcat-installation-directory>/webapps/ROOT 中的，且类文件放在 <Tomcat-installation-directory>/webapps/ROOT/WEB-INF/classes 中。
 
-如果你有一个 **com.myorg.MyServlet** 的完全合格的类名称，那么这个 servlet 类必须位于 WEB-INF/classes/com/myorg/MyServlet.class 中。
+如果你有一个完全合格的 **com.myorg.MyServlet** 的类名称，那么这个 servlet 类必须被放置在 WEB-INF/classes/com/myorg/MyServlet.class 中。
 
 现在，让我们把 HelloWorld.class 复制到 <Tomcat-installation-directory>/webapps/ROOT/WEB-INF/classes 中，并在位于 <Tomcat-installation-directory>/webapps/ROOT/WEB-INF/ 的 **web.xml** 文件中创建以下条目：
 
@@ -71,8 +71,8 @@ $ javac HelloWorld.java
 </servlet-mapping>
 ```
 
-上面的条目要被创建在 web.xml 文件中的 <web-app>...</web-app> 标签内。在该文件中可能已经有各种可用的条目，但不要在意。
+上面的条目要被创建在 web.xml 文件中可用的 <web-app>...</web-app> 标签内。在这个表中可能已经存在各种可用的条目，但没有关系。
 
-你基本上已经完成了，现在让我们使用 <Tomcat-installation-directory>\bin\startup.bat（在 Windows 上）或 <Tomcat-installation-directory>/bin/startup.sh（在 Linux/Solaris 等上）启动 tomcat 服务器，最后在浏览器的地址栏中输入 **http://localhost:8080/HelloWorld**。如果一切顺利，你会看到下面的结果：
+你基本上已经完成了，现在让我们使用 <Tomcat-installation-directory>\bin\startup.bat（Windows 操作系统中）或 <Tomcat-installation-directory>/bin/startup.sh（Linux/Solaris 等操作系统中）启动 tomcat 服务器，最后在浏览器的地址栏中输入 **http://localhost:8080/HelloWorld**。如果一切顺利，你会看到下面的结果：
 
 ![](images/example1.jpg)

@@ -1,12 +1,12 @@
 # Servlets——异常处理
 
-当一个 servlet 抛出一个异常时，web 容器在使用了 exception-type 元素的 **web.xml** 中搜索与抛出异常类型相匹配的配置。
+当一个 servlet 抛出一个异常时，web 容器在使用了 exception-type 元素的 **web.xml** 中搜索与抛出的异常类型相匹配的配置。
 
-你必须在 web.xml 中使用 **error-page** 元素来指定对特定**异常**或 HTTP **状态码**作出相应的 servlet 调用。
+你必须在 web.xml 中使用 **error-page** 元素来指定 servlet 调用，作为对特定的**异常**或 HTTP **状态码**作出的响应。
 
 ## web.xml 配置：
 
-假设，有一个 *ErrorHandler* 的 servelt 在任何已定义的异常或错误出现时被调用。以下是要在 web.xml 中创建的项。
+考虑这种情况，你有一个 *ErrorHandler* servelt，当任何已定义的异常或错误出现时就会被调用。以下是要在 web.xml 中创建的条目。
 
 <pre class="prettyprint notranslate">
 &lt;!-- servlet definition --&gt;
@@ -45,7 +45,7 @@
 </pre>
 
 
-如果你想对所有的异常有一个通用的错误处理程序，那么应该定义下面的 error-page，而不是为每个异常定义单独的 error-page 元素：
+如果你想对所有的异常有一个通用的错误处理程序，那么你应该定义如下所示的 error-page，而不是为每个异常定义单独的 error-page 元素：
 
 ``` 
 <error-page>
@@ -54,19 +54,19 @@
 </error-page>
 ```
 
-以下是关于上面的 web.xml 异常处理要注意的点：
+以下是异常处理中有关上述 web.xml 需要注意的点：
 
-- Servelt ErrorHandler 与其他的 servelt 的定义方式一样，且在 web.xml 中进行配置。
+- Servelt ErrorHandler 与其他的 servelt 的定义方式一样，且在 web.xml 中配置。
 
-- 如果有错误状态代码出现，不管为 404（未找到）或 403（禁止），则会调用 ErrorHandler 的 servlet。
+- 如果状态码有任何错误出现，不管是 404（未找到）还是 403（禁止），那么 ErrorHandler servlet 会被调用。
 
-- 如果 web 应用程序抛出 *ServletException* 或 *IOException*，那么 web 容器会调用 /ErrorHandler 的 Servlet。
+- 如果 web 应用程序抛出 *ServletException* 或 *IOException*，那么 web 容器就会调用 /ErrorHandler servlet。
 
-- 你可以定义不同的错误处理程序来处理不同类型的错误或异常。上面的实例是非常通用的，希望你能通过实例理解基本的概念。
+- 你可以定义不同的错误处理程序来处理不同类型的错误或异常。上述例子非常通用，希望它达到了让你理解基本概念的目的。
 
 ## 请求属性——错误/异常：
 
-以下是错误处理的 servlet 可以访问的请求属性列表，用来分析错误/异常的性质。
+以下是错误处理 servlet 可以访问的请求属性列表，用来分析错误/异常的性质。
 
 <table class="table table-bordered">
 <tr><th style="width:5%">序号</th><th>属性 &amp; 描述</th></tr>
@@ -86,9 +86,9 @@
 
 ## Servlet 错误处理程序实例：
 
-以下是 Servlet 实例，将应对任何你所定义的错误或异常发生时的错误处理程序。
+以下是 Servlet 实例，用于任何你定义的 servlet 出现任何错误或异常时的情况。
 
-本实例让你对 Servlet 中的异常处理有基本的了解，你可以使用相同的概念编写更复杂的异常处理应用程序：
+这个例子让你对 Servlet 中的异常处理有了基本的了解，但是你可以使用相同的概念编写更复杂的异常处理应用程序：
 
 ``` 
 // Import required java libraries
@@ -160,9 +160,9 @@ public class ErrorHandler extends HttpServlet {
 }
 ```
 
-以通常的方式编译 **ErrorHandler.java**，把你的类文件放入<Tomcat-installation-directory>/webapps/ROOT/WEB-INF/classes 中。
+以常用的方式编译 **ErrorHandler.java** 并把你的类文件放入<Tomcat-installation-directory>/webapps/ROOT/WEB-INF/classes 中。
 
-让我们在 web.xml 文件中添加如下配置来处理异常：
+让我们将下述配置添加到 web.xml 文件中来处理异常：
 
 <pre class="prettyprint notranslate">
 &lt;servlet&gt;
@@ -184,7 +184,7 @@ public class ErrorHandler extends HttpServlet {
 &lt;/error-page&gt;
 </pre>
 
-现在，尝试使用一个会产生异常的 servlet，或者输入一个错误的 URL，这将触发 Web 容器调用 **ErrorHandler** 的 servlet，并显示适当的消息。例如，如果你输入了一个错误的 URL，那么它将显示下面的结果：
+现在，尝试使用一个会产生任何异常的 servlet 或者输入一个错误的 URL，这将触发 Web 容器调用 **ErrorHandler** servlet 并显示适当的消息。例如，如果你输入了一个错误的 URL，那么它将显示如下所示的结果：
 
 <pre class="result notranslate">
 The status code : 404
@@ -192,4 +192,4 @@ The status code : 404
 
 
 
-上面的代码在某些 web 浏览器中可能无法正常工作。因此，请尽量尝试使用 Mozilla 和 Safari 浏览器。
+上述代码在一些 web 浏览器中可能无法工作。因此请尝试使用 Mozilla 和 Safari 浏览器，这样上述代码应该能正常工作。

@@ -1,12 +1,12 @@
 # Servlets——编写过滤器
 
-Servlet 过滤器是可用于 Servlet 编程的 Java 类，有以下目的：
+Servlet 过滤器是Java 类，可用于 Servlet 编程中的下述目的：
 
-- 在客户端的请求访问后端资源之前，拦截这些请求。
+- 在它们访问后端资源之前，拦截这些来自客户端的请求。
 
-- 在服务器的响应发送回客户端之前，处理这些响应。
+- 在它们发送回客户端之前，处理这些来自服务器端的响应。
 
-根据规范建议的各种类型的过滤器：
+这是规范建议的各种类型的过滤器：
 
 - 身份验证过滤器。
 
@@ -14,7 +14,7 @@ Servlet 过滤器是可用于 Servlet 编程的 Java 类，有以下目的：
 
 - 加密过滤器。
 
-- 触发资源访问事件过滤器。
+- 触发访问事件资源的过滤器。
 
 - 图像转换过滤器。
 
@@ -26,13 +26,13 @@ Servlet 过滤器是可用于 Servlet 编程的 Java 类，有以下目的：
 
 - 转换 XML 内容的 XSL/T 过滤器。
 
-过滤器被部署在部署描述符文件 **web.xml** 中，然后映射到你的应用程序的部署描述符中的 servlet 名称或 URL 模式中。
+过滤器在部署描述符文件 **web.xml** 中被部署，然后被映射到 servlet 名称或你的应用程序的部署描述符中的 URL 模式。
 
-当 web 容器启动 web 应用程序时，它会为你在部署描述符中声明的每一个过滤器创建一个实例。该过滤器执行的顺序是按它们在部署描述符中声明的顺序。
+当 web 容器启动你的 web 应用程序时，它会为每个在部署描述符中已声明的过滤器创建一个实例。过滤器按照它们在部署描述符中声明的顺序执行。
 
 ## Servlet 过滤器方法：
 
-过滤器仅仅是一个实现了 javax.servlet.Filter 接口的 Java 类。javax.servlet.Filter 接口定义了三个方法：
+过滤器仅仅是一个实现了 javax.servlet.Filter 接口的 Java 类。javax.servlet.Filter 接口定义了三种方法：
 
 <table class="table table-bordered">
 <tr><th style="width:5%">序号</th><th>方法 &amp; 描述</th></tr>
@@ -46,7 +46,7 @@ Servlet 过滤器是可用于 Servlet 编程的 Java 类，有以下目的：
 
 ## Servlet 过滤器实例：
 
-以下是 Servlet 过滤器的实例，将输出客户端的 IP 地址和当前的日期时间。本实例让你对 Servlet 过滤器有基本的了解，你可以使用相同的概念编写更复杂的过滤器应用程序：
+以下是 Servlet 过滤器的实例，将输出客户端的 IP 地址和当前的日期时间。这个例子使你对 Servlet 过滤器有了基本的了解，但是你可以使用相同的概念编写更复杂的过滤器应用程序：
 
 ``` 
 // Import required java libraries
@@ -82,11 +82,11 @@ public class LogFilter implements Filter  {
 }
 ```
 
-以通常的方式编译 **LogFilter.java**，把你的类文件放入 <Tomcat-installation-directory>/webapps/ROOT/WEB-INF/classes 中。
+用常用的方式编译 **LogFilter.java** 并把你的类文件放入 <Tomcat-installation-directory>/webapps/ROOT/WEB-INF/classes 中。
 
 ## Web.xml 中的 Servlet 过滤器映射：
 
-定义过滤器，然后映射到一个 URL 或 Servlet，这与定义 Servlet，然后映射到一个 URL 模式的方式大致相同。在部署描述符文件 **web.xml** 中为过滤器标签创建下面的条目：
+过滤器被定义然后被映射到一个 URL 或 Servlet中，这与Servlet被定义然后映射到一个 URL 模式中的方法是相同的。为在部署描述符文件 **web.xml** 中过滤器标签创建如下所示条目：
 
 ``` 
 <filter>
@@ -103,13 +103,13 @@ public class LogFilter implements Filter  {
 </filter-mapping>
 ```
 
-上述过滤器适用于所有的 servlet，因为我们在配置中指定了 /* 。如果你只想在少数的 servlet 上应用过滤器，你可以指定一个特定的 servlet 路径。
+上述过滤器可以应用到所有的 servlet 中，因为在配置中我们指定了 /* 。如果你只想在少数的 servlet 中应用过滤器，那么你可以指定一个特定的 servlet 路径。
 
-现在试着以常用的方式调用任何 servlet，你将会看到在 web 服务器日志中生成的日志。你也可以使用 Log4J 记录器来把上面的日志记录到一个单独的文件中。
+现在尝试用常用的方式调用任何 servlet，然后你将会在 web 服务器日志中看到生成的日志。你也可以使用 Log4J 记录器来在一个单独的文件中记录上述日志。
 
 ## 使用多个过滤器：
 
-Web 应用程序可以根据特定的目的定义若干个不同的过滤器。假设你定义了两个过滤器 *AuthenFilter* 和 *LogFilter*。除了你需要创建一个如下所述的不同的映射之外，其余的处理与上述所讲解的大致相同：
+Web 应用程序可以定义多个带有不同目的的过滤器。考虑这种情况，你定义了两个过滤器 *AuthenFilter* 和 *LogFilter*。除了你需要创建一个如下所述的不同的映射之外，其余的处理与上述解释的一样：
 
 ``` 
 <filter>
@@ -140,9 +140,9 @@ Web 应用程序可以根据特定的目的定义若干个不同的过滤器。�
 
 ## 过滤器的应用顺序：
 
-web.xml 中的 filter-mapping 元素的顺序决定了 web 容器应用过滤器到 servlet 的顺序。若要反转过滤器的顺序，你只需要在 web.xml 文件中反转 filter-mapping 元素即可。
+web.xml 中的 filter-mapping 元素的顺序决定了 web 容器把过滤器应用到 servlet 的顺序。若要反转过滤器的顺序，你只需要在 web.xml 文件中反转 filter-mapping 元素即可。
 
-例如，上面的实例先应用 LogFilter，然后再应用 AuthenFilter，但是下面的实例将颠倒这个顺序：
+例如，上述实例首先应用 LogFilter然后再应用 AuthenFilter 到任何 servlet 中，但是下述实例将反转这个顺序：
 
 ``` 
 <filter-mapping>
