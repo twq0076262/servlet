@@ -11,7 +11,7 @@
    - [Servlets - 编写过滤器](servlets-writing-filters.md)
    - [Servlets - 异常处理](servlets-exception-handling.md)
    - [Servlets - Cookies 处理](servlets-cookies-handling.md)
-   - [Servlets - Session 跟踪](servlets-session-tracking.md)
+   - [Servlets - 会话跟踪](servlets-session-tracking.md)
    - [Servlets - 数据库访问](servlets-database-access.md)
    - [Servlets - 文件上传](servlets-file-uploading.md)
    - [Servlets - 处理日期](servlets-handling-date.md)

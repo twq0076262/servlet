@@ -1,16 +1,16 @@
 # Servlets——HTTP 状态码
 
-HTTP 请求和 HTTP 响应消息的格式是类似的，结构如下：
+HTTP 请求的格式和 HTTP 响应消息的格式是相似的且都有如下所示结构：
 
-- 初始状态行 + 回车换行符（回车+换行）
+- 一个初始状态行 + CRLF(回车 + 换行 即新行)
 
-- 零个或多个标题行+回车换行符
+- 零个或多个标题行 + CRLF
 
-- 一个空白行，即回车换行符
+- 一个空白行，即一个 CRLF
 
-- 一个可选的消息主体，比如文件、查询数据或查询输出
+- 一个可选的消息主体，如文件、查询数据或查询输出
 
-例如，服务器的响应头如下所示：
+例如，服务器的响应头信息看起来如下所示：
 
 <pre class="prettyprint notranslate">
 HTTP/1.1 200 OK
@@ -29,9 +29,9 @@ HeaderN: ...
 </pre>
 
 
-状态行包括 HTTP 版本（在本例中为 HTTP/1.1）、一个状态码（在本例中为 200）和一个对应于状态码的短消息（在本例中为 OK）。
+状态行包括 HTTP 版本（例子中的 HTTP/1.1）、一个状态码（例子中的 200）和一个对应于状态码的短消息（例子中的 OK）。
 
-以下是可能从 Web 服务器返回的 HTTP 状态码和相关的信息列表：
+以下 HTTP 状态码以及可能从 Web 服务器返回的相关的消息的列表：
 
 <table class="table table-bordered">
   <tr>
@@ -203,9 +203,9 @@ HeaderN: ...
   </tr>
 </table> 
 
-## 设置 HTTP 状态代码的方法：
+## 设置 HTTP 状态码的方法：
 
-下面的方法可用于在 Servlet 程序中设置 HTTP 状态码。这些方法通过 *HttpServletResponse* 对象可用。
+下面是在 servlet 程序中可以用于设置 HTTP 状态码的方法。通过 *HttpServletResponse* 对象这些方法是可用的。
 
 <table class="table table-bordered">
 <tr><th style="width:5%">序号	</th><th>方法&amp;描述</th></tr>
@@ -219,7 +219,7 @@ HeaderN: ...
 
 ## HTTP 状态码实例：
 
-下面的例子把 407 错误代码发送到客户端浏览器，浏览器会显示 “Need authentication!!!”消息。
+下述例子将发送 407 错误代码到客户端浏览器，且浏览器会向你显示 “需要身份验证！！！”的消息。
 
 ```
 // Import required java libraries
@@ -246,7 +246,7 @@ public class showError extends HttpServlet {
 }
 ```
 
-现在，调用上面的 servlet 将显示以下结果：
+现在调用上述 servlet 会显示如下所示结果：
 
 <pre class="result notranslate">
 <h1 style="font-family:Tahoma,Arial,sans-serif;color:white;background-color:#525D76;">HTTP Status 407 - Need authentication!!!</h1>

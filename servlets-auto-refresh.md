@@ -1,20 +1,20 @@
 # Servlets——自动刷新页面
 
-假设有一个网页，它是显示现场比赛成绩或股票市场状况或货币兑换率。对于所有这些类型的页面，你需要定期刷新网页。
+假设一个 web 页面，显示了现场比赛得分或股票市场状况或货币兑换率。对于所有这些类型的页面，你都需要使用你浏览器中的 refresh 或 reload 按钮来定期刷新 web 页面。
 
-Java Servlet 提供了一个机制，使得网页会在给定的时间间隔自动刷新。
+Java Servlet 提供给你一个机制使这项工作变得简单，可以使得 web 页面在给定的时间间隔自动刷新。
 
-刷新网页的最简单的方式是使用响应对象的方法 **setIntHeader()**。以下是这种方法的定义：
+刷新一个 web 页面最简单的方式是使用响应对象的方法 **setIntHeader()**。以下是这种方法的特征：
 
 ``` 
 public void setIntHeader(String header, int headerValue)
 ```
 
-此方法把头信息 “Refresh” 连同一个表示时间间隔的整数值（以秒为单位）发送回浏览器。
+此方法将头信息 “Refresh” 和一个表示时间间隔的整数值（以秒为单位）发送回浏览器。
 
 ## 自动刷新页面实例:
 
-本实例演示了 Servlet 如何使用 **setIntHeader()** 方法来设置 **Refresh** 头信息，从而实现自动刷新页面。
+这个例子演示了 servlet 如何使用 **setIntHeader()** 方法设置 **Refresh** 头信息，实现自动刷新页面。
 
 ``` 
 // Import required java libraries
@@ -65,7 +65,7 @@ public class Refresh extends HttpServlet {
 }
 ```
 
-现在让我们来编译上面的 servlet，并在 web.xml 文件中创建以下条目：
+现在让我们来编译上述 servlet 并在 web.xml 文件中创建以下条目：
 
 ``` 
 ....
@@ -80,7 +80,7 @@ public class Refresh extends HttpServlet {
 ....
 ```
 
-现在通过访问 URL http://localhost:8080/Refresh 来调用这个 servlet。这将会每隔 5 秒钟显示一次当前系统时间。运行该 servlet，并等待查看结果：
+现在使用 URL http://localhost:8080/Refresh 来调用这个 servlet。这将会每隔 5 秒钟显示一次当前系统时间，如下所示。运行该 servlet并等着看结果：
 
 <pre class="result notranslate">
 <h1 align="center">Auto Page Refresh using Servlet</h1>

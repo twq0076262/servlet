@@ -1,6 +1,6 @@
-# Servlet——服务器 HTTP 响应
+# Servlets——服务器 HTTP 响应
 
-正如前面的章节中讨论的那样，当一个 Web 服务器响应一个 HTTP 请求时，响应通常包括一个状态行、一些响应报头、一个空行和文档。一个典型的响应如下所示：
+正如在前面的章节中讨论的一样，当一个 Web 服务器对浏览器响应一个 HTTP 请求时，响应通常包括一个状态行、一些响应头信息、一个空行和文档。一个典型的响应如下所示：
 
 <pre class="prettyprint notranslate">
 HTTP/1.1 200 OK
@@ -19,9 +19,9 @@ HeaderN: ...
 </pre>
 
 
-状态行包括 HTTP 版本（在本例中为 HTTP/1.1）、一个状态码（在本例中为 200）和一个对应于状态码的短消息（在本例中为 OK）。
+状态行包括 HTTP 版本（例子中的 HTTP/1.1）、一个状态码（例子中的 200）和一个对应于状态码的短消息（例子中的 OK）。
 
-下表总结了从 Web 服务器端返回到浏览器的最有用的 HTTP 1.1 响应报头，你会在 Web 编程中频繁地使用它们：
+下面是从 web 服务器端返回到浏览器的最有用的 HTTP 1.1 响应头信息的总结，且在 web 编程中你会频繁地使用它们：
 
 <table class="table table-bordered">
 <tr><th style="width:30%">头信息</th><th>描述</th></tr>
@@ -43,7 +43,7 @@ HeaderN: ...
 
 ## 设置 HTTP 响应头信息的方法：
 
-下面的方法可用于在 Servlet 程序中设置 HTTP 响应头信息。这些方法通过 *HttpServletResponse* 对象可用。
+下面的方法可用于在 servlet 程序中设置 HTTP 响应头信息。通过 *HttpServletResponse* 对象这些方法是可用的。
 
 <table class="table table-bordered">
 <tr><th style="width:5%">序号</th><th>方法 &amp; 描述</th></tr>
@@ -95,9 +95,9 @@ HeaderN: ...
 <p>为该响应设置状态码。</p></td></tr>
 </table> 
 
-## HTTP Header 响应实例：
+## HTTP 头信息响应实例：
 
-你已经在前面的实例中看到 setContentType() 方法，下面的实例也使用了同样的方法，此外，我们会用 **setIntHeader()** 方法来设置 **Refresh** 头信息。
+在前面的实例中你已经了解了 setContentType() 方法的工作方式，下面的实例也会用到同样的方法，此外，我们会用 **setIntHeader()** 方法来设置 **Refresh** 头信息。
 
 ``` 
 // Import required java libraries
@@ -148,7 +148,7 @@ public class Refresh extends HttpServlet {
 }
 ```
 
-现在，调用上面的 Servlet，每隔 5 秒会显示当前系统时间。只要运行 Servlet 并稍等片刻，即可看到如下的结果：
+现在调用上述 servlet，每 5 秒后就会显示当前的系统时间，如下所示。运行 servlet 并等着看结果：
 
 <pre class="result notranslate">
 <h1 align="center">Auto Refresh Header Setting</h1>

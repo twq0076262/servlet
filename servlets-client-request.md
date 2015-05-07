@@ -1,8 +1,8 @@
 # Servlets——客户端 HTTP 请求
 
-当浏览器请求网页时，它会向 Web 服务器发送特定信息，这些信息不能被直接读取，因为这些信息是作为 HTTP 请求的头的一部分进行传输的。你可以查看 [HTTP 协议]( http://www.tutorialspoint.com/http/index.htm)了解更多相关信息。
+当浏览器请求网页时，它会向 web 服务器发送大量信息，这些信息不能被直接读取，因为这些信息是作为 HTTP 请求头的一部分行进的。关于这点你可以查看 [**HTTP 协议**]( http://www.tutorialspoint.com/http/index.htm)来了解更多的信息。
 
-以下是来自于浏览器端的重要头信息，你可以在 Web 编程中频繁使用：
+以下是来自浏览器端的重要的头信息，你会在 web 编程中频繁的使用：
 
 <table class="table table-bordered">
 <tr><th style="width:30%">头信息</th><th>描述</th></tr>
@@ -21,9 +21,9 @@
 <tr><td>User-Agent</td><td>这个头信息识别发出请求的浏览器或其他客户端，并可以向不同类型的浏览器返回不同的内容。</td></tr>
 </table> 
 
-## 读取 HTTP 头的方法：
+## 读取 HTTP 头信息的方法：
 
-下面的方法可用在 Servlet 程序中读取 HTTP 头。这些方法通过 *HttpServletRequest* 对象可用。
+下述方法可以用于读取 servlet 程序中的 HTTP 头信息。通过 *HttpServletRequest* 对象这些方法是可用的。
 
 <table class="table table-bordered">
 <tr><th style="width:5%">序号</th><th>方法 &amp; 描述</th></tr>
@@ -89,11 +89,11 @@
 <p>返回接收到这个请求的端口号。</p></td></tr>
 </table> 
 
-## HTTP Header 请求实例：
+## HTTP 头信息请求实例：
 
-下面的实例使用 HttpServletRequest 的 **getHeaderNames()** 方法读取 HTTP 头信息。该方法返回一个枚举，包含与当前的 HTTP 请求相关的头信息。
+下述例子使用了 HttpServletRequest 的 **getHeaderNames()** 方法来读取 HTTP 头信息。该方法返回了一个枚举，包含与当前的 HTTP 请求相关的头信息。
 
-一旦我们有一个枚举，我们可以以标准方式循环枚举，使用 hasMoreElements() 方法来确定何时停止，使用 *nextElement()* 方法来获取每个参数的名称。
+一旦我们得到一个枚举，我们可以以标准方式循环这个枚举，使用 hasMoreElements() 方法来确定何时停止循环，使用 *nextElement()* 方法来获取每个参数的名称。
 
 ``` 
 // Import required java libraries
@@ -142,7 +142,7 @@ public class DisplayHeader extends HttpServlet {
 }
 ```
 
-现在，调用上面的 Servlet 会产生以下结果：
+现在，调用上述 servlet 会产生如下所示的结果：
 
 <pre class="result notranslate">
 <h1 align="center">HTTP Header Request Example</h1>

@@ -1,18 +1,18 @@
 # Servlets——数据库访问
 
-本教程假定你已经了解了 JDBC 应用程序的工作方式。在你开始学习 Servlet 数据库访问之前，请确保你已经有适当的 JDBC 环境设置和数据库。
+本教程假定你已经了解了 JDBC 应用程序的工作方式。在你开始学习 servlet 数据库访问之前，确保你已经有适当的 JDBC 环境设置和数据库。
 
-关于使用 JDBC 访问数据库及 JDBC 的环境配置的更多细节，请看 [JDBC 教程]( http://www.tutorialspoint.com/jdbc/index.htm)。
+关于如何使用 JDBC 访问数据库及其环境配置的更多细节，你可以查看我们的 [JDBC 教程]( http://www.tutorialspoint.com/jdbc/index.htm)。
 
-从基本概念下手，让我们来创建一个简单的表，并在表中创建几条记录。
+从基本概念开始，让我们创建一个简单的表，并在表中创建几条记录，如下所示：
 
-## 创建数据库表
+## 创建表
 
-在测试数据库 TEST 中创建 **Employees** 表，请按以下步骤进行：
+在 TEST 数据库中创建 **Employees** 表，请按以下步骤进行：
 
 ### 步骤 1：
 
-打开**命令行提示符**，并更改进入到安装目录，如下所示：
+打开 **Command Prompt**，并改为安装目录，如下所示：
 
 ``` 
 C:\>
@@ -22,7 +22,7 @@ C:\Program Files\MySQL\bin>
 
 ### 步骤 2：
 
-登录到数据库，如下所示：
+登录数据库，如下所示：
 
 ``` 
 C:\Program Files\MySQL\bin>mysql -u root -p
@@ -32,7 +32,7 @@ mysql>
 
 ### 步骤 3：
 
-在测试数据库 **TEST** 中创建 **Employee** 表，如下所示：
+在 **TEST** 数据库中创建 **Employee** 表，如下所示：
 
 ``` 
 mysql> use TEST;
@@ -49,7 +49,7 @@ mysql>
 
 ## 创建数据记录
 
-最后，在 Employee 表中创建几条记录，如下所示：
+最后在 Employee 表中创建几条记录，如下所示：
 
 ``` 
 mysql> INSERT INTO Employees VALUES (100, 18, 'Zara', 'Ali');
@@ -65,7 +65,7 @@ mysql>
 
 ## 访问数据库
 
-下面的实例演示了如何使用 Servlet 访问 TEST 数据库。
+这里的例子演示了如何使用 Servlet 访问 TEST 数据库。
 
 ``` 
 // Loading required libraries
@@ -149,7 +149,7 @@ public class DatabaseAccess extends HttpServlet{
 } 
 ```
 
-现在让我们来编译上面的 servlet，并在 web.xml 文件中创建以下条目：
+现在让我们来编译述 servlet 并在 web.xml 文件中创建以下条目：
 
 ``` 
 ....
@@ -164,7 +164,7 @@ public class DatabaseAccess extends HttpServlet{
 ....
 ```
 
-现在调用这个 servlet，输入链接：http://localhost:8080/DatabaseAccess，将显示以下响应结果：
+现在使用 URL http://localhost:8080/DatabaseAccess 调用这个 servlet，将显示如下所示响应：
 
 <pre class="result notranslate">
 <h1 align="center">Database Result</h1>

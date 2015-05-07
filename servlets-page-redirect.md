@@ -1,15 +1,15 @@
-# Servlets——网页重定向
+# Servlets——页面重定向
 
-当文档移动到新的位置，我们需要向客户端发送这个新位置时，我们需要用到网页重定向。当然，也可能是为了负载均衡，或者只是为了简单的随机，这些情况都有可能用到网页重定向。
+当文档移动到一个新的位置时，通常会使用页面重定向，我们需要将客户端发送到这个新位置或者也可能是由于负载均衡，或者只是为了简单的随机。
 
-重定向请求到另一个网页的最简单的方式是使用 response 对象的 **sendRedirect()** 方法。下面是该方法的定义： 
+重定向请求到另一个页面的最简单的方式是使用 response 对象的 **sendRedirect()** 方法。下面是该方法的特征： 
 
 ``` 
 public void HttpServletResponse.sendRedirect(String location)
 throws IOException 
 ```
 
-该方法把响应连同状态码和新的网页位置发送回浏览器。你也可以通过把 setStatus() 和 setHeader() 方法一起使用来达到同样的效果：
+该方法将响应和状态码及新的页面位置发送回浏览器。你也可以通过一起使用 setStatus() 和 setHeader() 方法来达到同样的效果：
 
 ``` 
 ....
@@ -21,7 +21,7 @@ response.setHeader("Location", site);
 
 ## 实例：
 
-本实例显示了 servlet 如何进行页面重定向到另一个位置：
+这个例子显示了 servlet 如何将页面重定向到另一个位置：
 
 ``` 
 import java.io.*;
@@ -44,7 +44,7 @@ public class PageRedirect extends HttpServlet{
 } 
 ```
 
-现在让我们来编译上面的 servlet，并在 web.xml 文件中创建以下条目：
+现在让我们来编译述servlet 并在 web.xml 文件中创建以下条目：
 
 ``` 
 ....
@@ -59,4 +59,4 @@ public class PageRedirect extends HttpServlet{
 ....
 ```
 
-现在通过访问 URL http://localhost:8080/PageRedirect 来调用这个 Servlet。这将使你转到给定的 URL http://www.photofuntoos.com。
+现在使用 URL http://localhost:8080/PageRedirect 来调用这个 servlet。这将使你跳转到给定的 URL http://www.photofuntoos.com 中。

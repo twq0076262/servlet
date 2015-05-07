@@ -1,6 +1,6 @@
 # Servlet 教程
 
-Servlet 提供了一个基于组件的、独立于平台的方法，构建基于 web 的应用程序，没有 CGI程序的性能限制。Servlet 访问 Java API 的整个家族，包括 JDBC API 来访问 enterprise 数据库。
+Servlet 为构建基于 web 的应用程序提供了一个基于组件的、独立于平台的方法，没有 CGI 程序的性能限制。Servlet 访问 Java API 的整个家族，包括 JDBC API 来访问企业数据库。
 
 本教程将用简单易学的方法教你使用 Java Servlets 开发基于 web 的应用程序。
 

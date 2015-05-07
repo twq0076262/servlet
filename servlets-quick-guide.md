@@ -1,10 +1,10 @@
 # Servlets——快速指南
 
-## Servlets 是什么？ 
+## 什么是 Servlets？ 
 
 Java servlet 是运行在 Web 或应用服务器上的程序，作为在来自 Web 浏览器或其他 HTTP 客户机的请求和在 HTTP 服务器上的数据库或应用程序的中间层。 
 
-使用 Servlet，你可以通过 Web 页面表单来收集用户的输入，显示从数据库或其他来源的记录，动态地创建 Web 页面。 
+使用 Servlet，你可以通过 web 页面表单来收集用户的输入，显示从数据库或其他来源的记录，动态地创建 web 页面。 
 
 Java servlet 通常服务于使用 Common Gateway Interface (CGI) 实现的同样的目的程序。但与 CGI 相比，Servlet 具有几个优点。
 
@@ -20,9 +20,9 @@ Java servlet 通常服务于使用 Common Gateway Interface (CGI) 实现的同�
 
 ## Servlet 体系结构： 
 
-以下图表显示了Servlet在Web应用程序中的位置。
+以下图表显示了 Servlet 在 Web 应用程序中的位置。
 
-![](../images/quick1.jpg)
+![](images/quick1.jpg)
 
 ## Servlet 包： 
 
@@ -62,7 +62,7 @@ setenv JAVA_HOME /usr/local/jdk1.5.0_20
 
 ## 设置 Web Server: Tomcat 
 
-许多支持 Servlet 的 Web 服务器都能在市场上都可以找到。一些 Web 服务器是可以免费下载的，而 Tomcat 就是其中之一。
+在市场上许多支持 Servlet 的 Web 服务器都可以找到。一些 Web 服务器是可以免费下载的，而 Tomcat 就是其中之一。
 
 Apache Tomcat 是一个实现 Java Servlet 和 JavaServer Pages 技术的开源软件，并可以作为一个独立的服务器进行测试 Servlet 和可以与 Apache Web 服务器一起被集成。下面是在计算机上安装 Tomcat 的步骤:
 
@@ -70,7 +70,7 @@ Apache Tomcat 是一个实现 Java Servlet 和 JavaServer Pages 技术的开源�
 
 - 一旦你下载安装包，并且解压二进制的发行版本到一个方便的位置。例如在 windows 上的 C:\apache-tomcat-5.5.29 中，或在 Linux/Unix 上的 /usr/local/apache-tomcat-5.5.29 中，并且创建 CATALINA_HOME 的环境变量指向这些位置。
 
-在 Windows 机器上，通过执行下列命令可以启动 Tomcat：
+在 Windows 操作系统的计算机上，通过执行下列命令可以启动 Tomcat：
 
 ``` 
 $CATALINA_HOME\bin\startup.bat
@@ -78,7 +78,7 @@ $CATALINA_HOME\bin\startup.bat
  C:\apache-tomcat-5.5.29\bin\startup.bat
 ```
 
-在 Unix (Solaris、Linux 等等)机器上，通过执行下列命令可以启动 Tomcat：
+在 Unix (Solaris、Linux 等等)操作系统的计算机上，通过执行下列命令可以启动 Tomcat：
 
 ``` 
 $CATALINA_HOME/bin/startup.sh
@@ -88,17 +88,17 @@ or
 
 启动后，可以通过访问 http://localhost:8080 / 来使用包含 Tomcat 的默认的 web 应用程序。如果一切都正常，那么它应该显示下面的结果：
 
-![](../images/environment1.jpg)
+![](images/environment1.jpg)
 
 关于配置和运行 Tomcat 的更多的信息可以在包含这个的文档中找到，也可以在 Tomcat 网址：http://tomcat.apache.org 中找到。
 
-在 Windows 机器上，通过执行下列命令可以停止 Tomcat：
+在 Windows 操作系统的计算机中，通过执行下列命令可以停止 Tomcat：
 
 ``` 
 C:\apache-tomcat-5.5.29\bin\shutdown
 ```
 
-在 Unix(Solaris、Linux 等等)机器上，通过执行下列命令可以停止 Tomcat：
+在 Unix(Solaris、Linux 等等)操作系统的计算机上，通过执行下列命令可以停止 Tomcat：
 
 ``` 
 /usr/local/apache-tomcat-5.5.29/bin/shutdown.sh
@@ -115,16 +115,16 @@ set CATALINA=C:\apache-tomcat-5.5.29
 set CLASSPATH=%CATALINA%\common\lib\servlet-api.jar;%CLASSPATH%
 ```
 
-或者，在 Windows NT / 2000 / XP 中，你也可以在我的电脑上单击右键，选择属性，然后是选择高级，再然后是选择环境变量。接下来，你将更新 PATH 值，并且按下 OK 按钮。
+或者，在 Windows NT / 2000 / XP 操作系统中，你也可以在我的电脑上单击右键，选择属性，然后选择高级，再选择环境变量。接下来，你将更新 PATH 值，并且按下 OK 按钮。
 
-在 Unix(Solaris、Linux 等等)上，如果你使用 C shell 命令，你将把下列语句添加到 .cshrc 文件中。
+在 Unix(Solaris、Linux 等等)操作系统中，如果你使用 C shell 命令，你将把下列语句添加到 .cshrc 文件中。
 
 ``` 
 setenv CATALINA=/usr/local/apache-tomcat-5.5.29
 setenv CLASSPATH $CATALINA/common/lib/servlet-api.jar:$CLASSPATH
 ```
 
-**注：**假设你的开发目录是 C:\ServletDevel(Windows) 或是 /usr/ServletDevel(Unix)，那么你将需要用上面添加的类似的方式在 CLASSPATH 中添加这些目录。 
+**注：**假设你的开发目录是 C:\ServletDevel(Windows 操作系统) 或是 /usr/ServletDevel(Unix 操作系统)，那么你将需要用上面添加的类似的方式在 CLASSPATH 中添加这些目录。 
 
 ## 关于 Hello World 的简单代码： 
 
@@ -162,7 +162,7 @@ public class HelloWorld extends HttpServlet {
 
 ## 编译 Servlet： 
 
-让我们把上面的代码添加到 HelloWorld.java 文件中，并且把这个文件放在 C:\ServletDevel(Windows) 或 /usr/ServletDevel(Unix) 中，然后你将同样需要在 CLASSPATH 中添加这些目录。
+让我们把上面的代码添加到 HelloWorld.java 文件中，并且把这个文件放在 C:\ServletDevel(Windows 操作系统中) 或 /usr/ServletDevel(Unix 操作系统中) 中，然后你将同样需要在 CLASSPATH 中添加这些目录。
 
 假设你的环境正确地设置，进入 **ServletDevel** 目录并且编译 HelloWorld.java，如下所示:
 
@@ -197,8 +197,8 @@ $ javac HelloWorld.java
 
 在 web.xml 文件中，以上条目创建在有效的标签 <web-app>...</web-app> 内。可能在这个表中不同的条目已经使用，但没关系。 
 
-你几乎已经完成了，现在让我们开始使用 <Tomcat-installation-directory>\bin\startup.bat (在 windows 上)或者 <Tomcat-installation-directory>/bin/startup.sh (在 Linux/Solaris 等等)来启动 Tomcat 服务器，最后在浏览器的地址栏中输入 **http://localhost:8080/HelloWorld**。如果一切都正常，你将获得以下结果：
+你几乎已经完成了，现在让我们开始使用 <Tomcat-installation-directory>\bin\startup.bat (windows 操作系统中)或者 <Tomcat-installation-directory>/bin/startup.sh (Linux/Solaris 等等操作系统中)来启动 Tomcat 服务器，最后在浏览器的地址栏中输入 **http://localhost:8080/HelloWorld**。如果一切都正常，你将获得以下结果：
 
-![](../images/example1.jpg)
+![](images/example1.jpg)
 
 为了获得详细的 Servlet 信息，你可以从头开始学习完整的教程：[**Java Servlets**](http://www.tutorialspoint.com/servlets/index.htm)。

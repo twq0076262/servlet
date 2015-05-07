@@ -2,51 +2,53 @@
 
 ## 什么是 Servlets？
 
-Java Servlets 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。
+Java servlet 是运行在 Web 或应用服务器上的程序，作为在来自 Web 浏览器或其他 HTTP 客户机的请求和在 HTTP 服务器上的数据库或应用程序的中间层。 
 
-使用 Servlet，你可以收集来自网页表单的用户输入，呈现来自数据库或者其他源的记录，还可以动态创建网页。
+使用 Servlet，你可以通过 web 页面表单来收集用户的输入，显示从数据库或其他来源的记录，动态地创建 web 页面。 
 
-通常情况下，Java Servlets与使用公共网关接口(CGI)实现的程序可以达到异曲同工的效果。但是相比于 CGI，Servlet 有以下几点优势：
+Java servlet 通常服务于使用 Common Gateway Interface (CGI) 实现的同样的目的程序。但与 CGI 相比，Servlet 具有几个优点。
 
-- 性能明显更好。
+- 性能更好。
 
-- Servlets 在 Web 服务器的地址空间内执行。这样它就没有必要再创建一个单独的进程来处理每个客户端请求。
+- Servlet 在 Web 服务器的地址空间内执行。没有必要创建一个单独的进程来处理每个客户端请求。
 
-- Servlets 是独立于平台的，因为它们是用 Java 编写的。
+- 由于 Servlet 是用 Java 编写的，所以它是跨平台的。
 
-- 服务器上的 Java 安全管理器执行了一系列限制，以保护服务器计算机上的资源。因此，Servlets 是可信的。
+- 在服务器上的 Java 安全性管理器执行的一些限制来保护服务器上的资源。所以 servlet 是可信的。
 
-- Java 类库的全部功能对 Servlet 来说都是可用的。它可以通过 sockets 和 RMI 机制与 applets、数据库或其他软件进行交互。
+- Java 类库的完整的功能是对 Servlet 来说是可用的。它可以与小应用程序、数据库或其他软件通过通信接口和你已经了解的RMI机制进行通信。
+
 
 ## Servlets 架构：
 
-下图显示了 Servlets 在 Web 应用程序中的位置。
+下图显示了在 Web 应用程序中 Servlets 的位置。
 
-![](../images/arch1.jpg)
+![](images/arch1.jpg)
 
 ## Servlets 任务：
 
 Servlet 执行以下主要任务：
 
-- 读取客户端（浏览器）发送的显式的数据。这包括网页上的 HTML 表单，或者也可以是来自 applet 或自定义的 HTTP 客户端程序的表单。
+- 读取由客户端（浏览器）发送的显式数据。这包括网页上的 HTML 表单，或者也可以是来自 applet 或自定义的 HTTP 客户端程序的表单。
 
-- 读取客户端（浏览器）发送的隐式的 HTTP 请求数据。这包括 cookies、媒体类型和浏览器能理解的压缩格式等等。
+- 读取由客户端（浏览器）发送的隐式 HTTP 请求数据。这包括 cookies、媒体类型和浏览器能理解的压缩格式等等。
 
-- 处理数据并生成结果。这个过程可能需要访问数据库，执行 RMI 或 CORBA 调用，调用 Web 服务，或者直接计算得出对应的响应。
+- 处理数据并生成结果。这个过程可能需要访问数据库，执行 RMI 或 CORBA 调用，调用 Web 服务，或者直接计算响应。
 
-- 发送显式的数据（即文档）到客户端（浏览器）。该文档可以以多种多样的格式被发送，包括文本文件（HTML 或 XML）、二进制文件（GIF 图像）、Excel 等。
+- 发送显式数据（即文档）到客户端（浏览器）。该文档可以以多种多样的格式被发送，包括文本文件（HTML 或 XML）、二进制文件（GIF 图像）、Excel 等。
 
 - 发送隐式的 HTTP 响应到客户端（浏览器）。这包括告诉浏览器或其他客户端被返回的文档类型（例如 HTML），设置 cookies 和缓存参数，以及其他类似的任务。
 
 ## Servlets 包：
-Java Servlets 是 Java 类，通过带有支持 Java Servlet 规范的解释器的 web 服务器运行的。
 
-Servlets 可以使用 **javax.servlet** 和 **javax.servlet.http** 包创建，它是 Java 企业版的标准组成部分，Java 企业版是支持大型开发项目的 Java 类库的扩展版本。
+Java Servlet 是运行在 Web 服务器上的 Java 类，在 Web 服务器上有一个支持 Java Servlet 规范的解释器。 
 
-这些类实现了 Java Servlet 和 JSP 规范。在写本教程的时候，二者相应的版本分别是 Java Servlet 2.5 和 JSP 2.1。
+Servlet 可以使用 **javax.servlet** 和 **javax.servlet.http** 包来创建。它们是 Java 企业版的一个标准部分，也是支持大型开发项目的 Java 类库的扩展版。
 
-Java Servlet 就像任何其他的 Java 类一样已经被创建和编译。在你安装 Servlet 包并把它们添加到您的计算机上的 Classpath 类路径中之后，你就可以通过 JDK 的 Java 编译器或任何其他编译器来编译 Servlet。
+这些类实现了 Java Servlet 和 JSP 规范。在写这篇教程的时候，使用的版本分别是 Java Servlet 2.5 和 JSP 2.5。 
 
-## 下一步？
+就像任何其他 Java 类一样，Java Servlet 可以创建和编译。在安装 Servlet 包，并将它们添加到你的电脑的 Classpath 中之后，你可以使用 JDK 的 Java 编译器或其他任何当前编译器来编译 Servlet。
+
+## 后续内容
 
 接下来，本教程会带你一步一步地设置你的环境，以便开始后续的 Servlet 使用。因此，请系紧安全带，随我们一起开始 Servlet 的学习之旅吧！相信你会很喜欢这个教程的。
