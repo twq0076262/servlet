@@ -1,19 +1,19 @@
-#  Servlet 中文版
+# Servlet 教程
 
-官方英文原版：   
-http://www.tutorialspoint.com/servlets
-## 目的
+Servlet为构建基于web的应用程序提供了一个基于组件的、独立于平台的方法，没有CGI程序的性能限制。Servlet访问Java API的整个家族，包括JDBC API来访问企业数据库。
 
-翻译官方文档，目录见文件 [TOC.md](TOC.md)
+本教程将用简单易学的方法教你使用 Java Servlets 开发基于 web 的应用程序。
 
-## 操作示例
+|更新日期    |更新内容
+|----------|--------------------
+|2015-05-12|Servlet 教程
 
-https://github.com/jikexueyuanwiki/guide
+## 读者
 
-## 如何添加图片
+本教程是为需要了解 Java Servlets 框架及其应用程序的 Java 程序员设计的。学完本教程后你会发现自己处于一个使用 Java Servelts 专业知识的中等水平，之后你可以达到更高的水平。
 
-前提：官网上的所有图片都已经下载下来放入「images」文件夹，图片的文件名没做任何修改。
+## 先决条件
 
-1、请引用「images」文件夹中的图片，不要直接引用官方上的图片链接；    
-2、引用「images」文件夹时，请使用相对文件路径。
+我们假设你对 Java 编程语言非常了解。如果你对 web 应用程序及网络是如何工作的有一个基本的了解，那就非常棒了。
+
 

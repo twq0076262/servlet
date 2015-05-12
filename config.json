@@ -1,0 +1,7 @@
+{
+    "name": "Servlet 教程",
+    "introduction": "Servlet为构建基于web的应用程序提供了一个基于组件的、独立于平台的方法，没有CGI程序的性能限制。Servlet访问Java API的整个家族，包括JDBC API来访问企业数据库。",
+    "title": "Servlet 教程- 极客学院 Wiki",
+    "keywords": "Servlet 中文版,java Servlet,dispatcherservlet,web.xml,Servlet跳转",
+    "description": "Servlet为构建基于web的应用程序提供了一个基于组件的、独立于平台的方法，没有CGI程序的性能限制。Servlet访问Java API的整个家族，包括JDBC API来访问企业数据库。"
+}

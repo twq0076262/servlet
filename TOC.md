@@ -1,5 +1,4 @@
  - Servlets Tutorial
-   - [Servlets - 主页](index.md)
    - [Servlets - 概述](servlets_overview.md)
    - [Servlets - 环境设置](servlets-environment-setup.md)
    - [Servlets - 生命周期](servlets-life-cycle.md)
