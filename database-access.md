@@ -2,7 +2,7 @@
 
 本教程假定你已经了解了 JDBC 应用程序的工作方式。在你开始学习 servlet 数据库访问之前，确保你已经有适当的 JDBC 环境设置和数据库。
 
-关于如何使用 JDBC 访问数据库及其环境配置的更多细节，你可以查看我们的 [JDBC 教程]( http://www.tutorialspoint.com/jdbc/index.htm)。
+关于如何使用 JDBC 访问数据库及其环境配置的更多细节，你可以查看我们的  [JDBC 教程]( http://www.tutorialspoint.com/jdbc/index.htm) 。
 
 从基本概念开始，让我们创建一个简单的表，并在表中创建几条记录，如下所示：
 
