@@ -87,7 +87,7 @@ public class CurrentDate extends HttpServlet {
 
 
 
-尝试刷新 URL http://localhost:8080/CurrentDate，每隔几秒刷新一次你都会发现显示时间的差异。
+尝试刷新 URL http://localhost:8080/CurrentDate  ，每隔几秒刷新一次你都会发现显示时间的差异。
 
 ## 日期比较：
 
