@@ -2,9 +2,9 @@
 
 使用 Servlet 发送一封电子邮件是非常简单的，但是开始之前你必须在你的计算机上安装 **JavaMail API** 和 **Java Activation Framework(JAF)**。
 
-- 你可以从 Java 标准网站下载最新版本的 [JavaMail（版本 1.2）]( http://java.sun.com/products/javamail/)。
+- 你可以从 Java 标准网站下载最新版本的 [JavaMail（版本 1.2）]( http://java.sun.com/products/javamail/)
 
-- 你可以从 Java 标准网站下载最新版本的 [JAF（版本 1.1.1）]( http://java.sun.com/products/javabeans/glasgow/jaf.html)。
+- 你可以从 Java 标准网站下载最新版本的 [JAF（版本 1.1.1）]( http://java.sun.com/products/javabeans/glasgow/jaf.html)
 
 下载并解压缩这些文件，在新创建的顶级目录中你会发现这两个应用程序的一些 jar 文件。你需要把 **mail.jar** 和 **activation.jar** 文件添加到你的 CLASSPATH 中。
 
