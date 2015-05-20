@@ -22,7 +22,8 @@ System.out.println("Debugging message");
 
 ## 消息记录：
 
-利用标准日志记录方法，使用适当的日志记录方法来记录所有调试、警告和错误消息是非常好的想法，我使用的是 [log4J]( http://www.tutorialspoint.com/log4j/index.htm) 来记录所有的消息。
+利用标准日志记录方法，使用适当的日志记录方法来记录所有调试、警告和错误消息是非常好的想法，我使用的是 
+[log4J]( http://www.tutorialspoint.com/log4j/index.htm) 来记录所有的消息。
 
 Servlet API 还提供了一个简单的输出信息的方式，使用 log() 方法，如下所示：
 
