@@ -20,13 +20,13 @@ HTTP 是一种“无状态”协议，这意味着每次客户端检索 Web 页�
 
 该条目意味着，当表单被提交时，指定的名称和值会被自动包含在 GET 或 POST 数据中。每次当 web 浏览器发送回请求时，session_id 的值可以用于跟踪不同的 web 浏览器。
 
-这可能是保持会话跟踪的一种有效的方式，但是点击常规的（<A HREF...>）超文本链接不会导致表单提交，因此隐藏的表单字段也不支持常规的会话跟踪。
+这可能是保持会话跟踪的一种有效的方式，但是点击常规的 （<A HREF...>）  超文本链接不会导致表单提交，因此隐藏的表单字段也不支持常规的会话跟踪。
 
 ## URL 重写：
 
 你可以在每个标识会话的 URL 末尾追加一些额外的数据，且服务器会把该会话标识符与它已存储的有关会话的数据关联起来。
 
-例如，http://tutorialspoint.com/file.htm;sessionid=12345，会话标识符被附加为 sessionid=12345，可能会在 web 服务器端被访问来识别客户端。
+例如， http://tutorialspoint.com/file.htm;sessionid=12345 ，会话标识符被附加为 sessionid=12345，可能会在 web 服务器端被访问来识别客户端。
 
 URL 重写是维持会话的一种更好的方式，当浏览器不支持 cookie 时为浏览器工作，但是它的缺点是会动态的生成每个 URL 来分配会话 ID，即使页面是简单的静态的 HTML 页面。
 
@@ -150,54 +150,133 @@ public class SessionTrack extends HttpServlet {
 编译上述 servlet **SessionTrack** 并在 web.xml 文件中创建适当的条目。在浏览器地址栏输入 *http://localhost:8080/SessionTrack*，当你第一次运行时将显示如下所示的结果：
 
 <pre class="result notranslate">
-<h1 align="center">Welcome to my website</h1>
-<h2 align="center">Session Infomation</h2>
-<table cellpadding="5" class="table table-bordered">
-<tr bgcolor="#949494">
-  <th>Session info</th><th>value</th></tr>
-<tr>
-  <td>id</td>
-  <td>0AE3EC93FF44E3C525B4351B77ABB2D5</td></tr>
-<tr>
-  <td>Creation Time</td>
-  <td>Tue Jun 08 17:26:40 GMT+04:00 2010  </td></tr>
-<tr>
-  <td>Time of Last Access</td>
-  <td>Tue Jun 08 17:26:40 GMT+04:00 2010  </td></tr>
-<tr>
-  <td>User ID</td>
-  <td>ABCD  </td></tr>
-<tr>
-  <td>Number of visits</td>
-  <td>0</td></tr>
-</table>
-</pre>
 
+Welcome to my website
+
+Session Infomation
+
+<table cellpadding="5" class="table table-bordered">
+
+<tbody>
+
+<tr bgcolor="#949494">
+
+<th>Session info</th>
+
+<th>value</th>
+
+</tr>
+
+<tr>
+
+<td>id</td>
+
+<td>0AE3EC93FF44E3C525B4351B77ABB2D5</td>
+
+</tr>
+
+<tr>
+
+<td>Creation Time</td>
+
+<td>Tue Jun 08 17:26:40 GMT+04:00 2010  </td>
+
+</tr>
+
+<tr>
+
+<td>Time of Last Access</td>
+
+<td>Tue Jun 08 17:26:40 GMT+04:00 2010  </td>
+
+</tr>
+
+<tr>
+
+<td>User ID</td>
+
+<td>ABCD  </td>
+
+</tr>
+
+<tr>
+
+<td>Number of visits</td>
+
+<td>0</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</pre>
 
 现在尝试再次运行相同的 servlet，它将显示如下所示的结果：
 
 <pre class="result notranslate">
-<h1 align="center">Welcome Back to my website</h1>
-<h2 align="center">Session Infomation</h2>
+
+Welcome Back to my website
+
+Session Infomation
+
 <table cellpadding="5" class="table table-bordered">
+
+<tbody>
+
 <tr bgcolor="#949494">
-  <th>info type</th><th>value</th></tr>
+
+<th>info type</th>
+
+<th>value</th>
+
+</tr>
+
 <tr>
-  <td>id</td>
-  <td>0AE3EC93FF44E3C525B4351B77ABB2D5</td></tr>
+
+<td>id</td>
+
+<td>0AE3EC93FF44E3C525B4351B77ABB2D5</td>
+
+</tr>
+
 <tr>
-  <td>Creation Time</td>
-  <td>Tue Jun 08 17:26:40 GMT+04:00 2010  </td></tr>
+
+<td>Creation Time</td>
+
+<td>Tue Jun 08 17:26:40 GMT+04:00 2010  </td>
+
+</tr>
+
 <tr>
-  <td>Time of Last Access</td>
-  <td>Tue Jun 08 17:26:40 GMT+04:00 2010  </td></tr>
+
+<td>Time of Last Access</td>
+
+<td>Tue Jun 08 17:26:40 GMT+04:00 2010  </td>
+
+</tr>
+
 <tr>
-  <td>User ID</td>
-  <td>ABCD  </td></tr>
+
+<td>User ID</td>
+
+<td>ABCD  </td>
+
+</tr>
+
 <tr>
-  <td>Number of visits</td>
-  <td>1</td></tr>
+
+<td>Number of visits</td>
+
+<td>1</td>
+
+</tr>
+
+</tbody>
+
 </table>
+
 </pre>
 
 
