@@ -21,7 +21,3 @@
    - [包](packaging.md)
    - [调试](debugging.md)
    - [国际化](internationalization.md)
- - Servlet Useful Resources
-   - [快速指南](quick-guide.md)
-   - [有用的资源](useful-resources.md)
-   - [讨论](discussion.md)
