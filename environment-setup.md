@@ -10,7 +10,7 @@
 
 这一步涉及到下载 Java 软件开发工具包（SDK），并正确的设置 PATH 环境变量。
 
-你可以从 Oracle 的 Java 网站：[Java SE Downloads]( http://www.oracle.com/technetwork/java/javase/downloads/index.html) 下载 SDK。
+你可以从 Oracle 的 Java 网站[Java SE Downloads]( http://www.oracle.com/technetwork/java/javase/downloads/index.html) 下载 SDK。
 
 当你下载了你的 Java 实现后，按照给定的指令来安装和配置设置。最后，设置 PATH 和 JAVA _ HOME 环境变量来与包含 java 和 javac 的目录相关联，通常分别为 java _ install _ dir / bin 和 java _ install _ dir。
 
