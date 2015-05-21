@@ -1,6 +1,6 @@
 # 客户端 HTTP 请求
 
-当浏览器请求网页时，它会向 web 服务器发送大量信息，这些信息不能被直接读取，因为这些信息是作为 HTTP 请求头的一部分行进的。关于这点你可以查看 [HTTP 协议]( http://www.tutorialspoint.com/http/index.htm) 来了解更多的信息。
+当浏览器请求网页时，它会向 web 服务器发送大量信息，这些信息不能被直接读取，因为这些信息是作为 HTTP 请求头的一部分行进的。关于这点你可以查看 [HTTP 协议](http://www.tutorialspoint.com/http/index.htm) 来了解更多的信息。
 
 以下是来自浏览器端的重要的头信息，你会在 web 编程中频繁的使用：
 
