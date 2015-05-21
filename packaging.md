@@ -1,4 +1,4 @@
-# Servlets——包
+# 包
 
 涉及到 WEB-INF 子目录的 web 应用程序结构是所有的 Java web 应用程序的标准，并且是由 servlet API 规范指定的。给定一个 myapp 的顶级目录名，这里是目录结构，如下所示：
 

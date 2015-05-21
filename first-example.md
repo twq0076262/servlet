@@ -1,4 +1,4 @@
-# Servlets——实例
+# 实例
 
 Servlets 是 Java 类，服务于 HTTP 请求并实现了 **javax.servlet.Servlet** 接口。Web 应用程序开发人员通常编写扩展 javax.servlet.http.HttpServlet 的 servlets，它是一个实现了 Servlet 接口的抽象类并且是为处理 HTTP 请求专门设计的。
 

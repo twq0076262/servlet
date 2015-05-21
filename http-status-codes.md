@@ -1,4 +1,4 @@
-# Servlets——HTTP 状态码
+# HTTP 状态码
 
 HTTP 请求的格式和 HTTP 响应消息的格式是相似的且都有如下所示结构：
 

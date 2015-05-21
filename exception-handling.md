@@ -1,4 +1,4 @@
-# Servlets——异常处理
+# 异常处理
 
 当一个 servlet 抛出一个异常时，web 容器在使用了 exception-type 元素的 **web.xml** 中搜索与抛出的异常类型相匹配的配置。
 

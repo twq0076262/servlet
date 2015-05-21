@@ -1,4 +1,4 @@
-# Servlets——Cookies 处理
+# Cookies 处理
 
 Cookies 是存储在客户端计算机上的文本文件，用于各种信息的跟踪目的。Java Servlet 透明的支持 HTTP Cookies。
 
@@ -106,7 +106,7 @@ response.addCookie(cookie);
 
 ## 实例：
 
-让我们修改我们的[表单实例]( http://www.tutorialspoint.com/servlets/servlets-form-data.htm)来为姓名设置 cookies。
+让我们修改我们的 [表单实例](http://www.tutorialspoint.com/servlets/servlets-form-data.htm) 来为姓名设置 cookies。
 
 ``` 
 // Import required java libraries

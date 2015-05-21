@@ -1,4 +1,4 @@
-# Servlets——处理日期
+# 处理日期
 
 使用 Servlet 的最重要的优势之一是你可以使用核心 Java 中的大多数可用的方法。本教程将讲解 Java 提供的 **Date** 类，该类在 **java.util** 包中是可用的，这个类封装了当前的日期和时间。
 
@@ -87,7 +87,7 @@ public class CurrentDate extends HttpServlet {
 
 
 
-尝试刷新 URL http://localhost:8080/CurrentDate  ，每隔几秒刷新一次你都会发现显示时间的差异。
+尝试刷新 URL`http://localhost:8080/CurrentDate`，每隔几秒刷新一次你都会发现显示时间的差异。
 
 ## 日期比较：
 

@@ -1,4 +1,4 @@
-# Servlets——点击计数器
+# 点击计数器
 
 ## Web 页面的点击计数器：
 
@@ -153,7 +153,7 @@ public class SiteHitCounter implements Filter{
 ....
 ```
 
-现在调用任意 URL 如 URL http://localhost:8080/。每次任意页面被点击时，计数器的值都会加 1 并且会在日志中显示如下所示的消息：
+现在调用任意 URL 如 URL`http://localhost:8080/`。每次任意页面被点击时，计数器的值都会加 1 并且会在日志中显示如下所示的消息：
 
 <pre class="result notranslate">
 Site visits count : 1

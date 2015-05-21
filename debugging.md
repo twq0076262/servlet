@@ -1,4 +1,4 @@
-# Servlets——调试
+# 调试
 
 测试/调试 servlet 始终是困难的。Servlets 往往涉及大量的客户端/服务器交互，可能会出现错误但是又难以重现。
 
@@ -80,7 +80,7 @@ ServletContext 把它的文本消息记录到 servlet 容器的日志文件中�
 
 你通常不会希望 server_root/servlets 在你的 classpath 中，因为它会禁用 servlet 的重载。然而这种包含对于调试是有用的。在 HttpServer 中的自定义的 servlet 加载器加载 servlet 之前，它允许你的调试器在 servlet 中设置断点。
 
-一旦你设置了正确的类路径，就可以开始调试 sun.servlet.http.HttpServer。你可以在任何你想要调试的 servlet 中设置断点，然后使用 web 浏览器为给定的 servlet（http://localhost:8080/servlet/ServletToDebug）向 HttpServer 发出请求。你会看到程序执行到你设置的断点处停止。
+一旦你设置了正确的类路径，就可以开始调试 sun.servlet.http.HttpServer。你可以在任何你想要调试的 servlet 中设置断点，然后使用 web 浏览器为给定的 servlet（`http://localhost:8080/servlet/ServletToDebug`) 向 HttpServer 发出请求。你会看到程序执行到你设置的断点处停止。
 
 ## 使用注释：
 

@@ -1,4 +1,4 @@
-# Servlets——编写过滤器
+# 编写过滤器
 
 Servlet 过滤器是Java 类，可用于 Servlet 编程中的下述目的：
 
